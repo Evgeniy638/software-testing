@@ -37,4 +37,12 @@ public class BasePage {
     public WebElement waitVisibility(By by) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
+
+    public void sleep(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

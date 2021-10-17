@@ -34,4 +34,8 @@ public class HomePage extends BasePage {
     public MainSliderInHomePage goToSlider() {
         return new MainSliderInHomePage(driver);
     }
+
+    public CatalogInHomePage goToCatalog() {
+        return new CatalogInHomePage(driver);
+    }
 }
