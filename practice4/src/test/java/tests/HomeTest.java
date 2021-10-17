@@ -31,4 +31,21 @@ public class HomeTest extends BaseTest {
                 .checkPrevButton()
                 .checkPaginationBullet();
     }
+
+    @Test(priority = 0, description = "Проверка каталога на главной странице")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Переключение по табам каталога и проверка стилей наведение на элементы каталога")
+    @Story("Пользователь ищет по каталогу интересующую игру")
+    public void checkMainCatalog(Method method) {
+        startTest(method.getName(), "Проверка каталога на главной странице");
+
+        homePage.goToHome()
+                .goToCatalog()
+                .goToExpected()
+                .checkHover()
+                .goToNews()
+                .checkHover()
+                .goToSalesLeaders()
+                .checkHover();
+    }
 }
