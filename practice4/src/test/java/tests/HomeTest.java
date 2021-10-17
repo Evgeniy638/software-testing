@@ -12,21 +12,23 @@ import utils.listeners.TestListener;
 
 import java.lang.reflect.Method;
 
-import static org.testng.AssertJUnit.assertEquals;
 import static utils.extentreports.ExtentTestManager.startTest;
 
 @Listeners({ TestListener.class })
-@Epic("Regression Tests")
-@Feature("Login Tests")
+@Epic("Главаная страница")
+@Feature("Работа с главно")
 public class HomeTest extends BaseTest {
-    @Test(priority = 0, description = "Invalid Login Scenario with wrong username and password.")
+    @Test(priority = 0, description = "Проверка слайдера на главной странице")
     @Severity(SeverityLevel.BLOCKER)
-    @Description("Test Description: Login test with wrong username and wrong password.")
-    @Story("Invalid username and password login test")
-    public void goToHome(Method method) {
-        startTest(method.getName(), "Invalid Login Scenario with invalid username and password.");
+    @Description("Переключение слайдера с помощью кнопок и булетов")
+    @Story("Пользователь щёлкает на булеты и кнопки у слайдера")
+    public void checkMainSlider(Method method) {
+        startTest(method.getName(), "Проверка слайдера на главной странице");
 
-        homePage.goToHH();
-        assertEquals(40, 40);
+        homePage.goToHome()
+                .goToSlider()
+                .checkNextButton()
+                .checkPrevButton()
+                .checkPaginationBullet();
     }
 }

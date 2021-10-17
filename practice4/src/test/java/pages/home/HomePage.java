@@ -1,7 +1,8 @@
-package pages;
+package pages.home;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import pages.BasePage;
 import utils.logs.Log;
 
 public class HomePage extends BasePage {
@@ -15,27 +16,22 @@ public class HomePage extends BasePage {
     /**
      * Variables
      */
-    String baseURL = "https://hh.ru/";
+    String baseURL = "https://steampay.com/";
 
     /**
      * Web Elements
      */
-    By signInButtonClass = By.className("btnSignIn");
 
     /**
      * Page Methods
      */
-    //Go to Homepage
-    public HomePage goToHH() {
-        Log.info("Opening hh.ru Website.");
+    public HomePage goToHome() {
+        Log.info("Opening steampay Website.");
         driver.get(baseURL);
         return this;
     }
 
-    //Go to LoginPage
-    public LoginPage goToLoginPage() {
-        Log.info("Going to Login Page..");
-        click(signInButtonClass);
-        return new LoginPage(driver);
+    public MainSliderInHomePage goToSlider() {
+        return new MainSliderInHomePage(driver);
     }
 }
