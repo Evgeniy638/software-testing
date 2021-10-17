@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="N11 Test Suite" >
+<suite name="Steampay Test Suite" >
     <listeners>
         <listener class-name="utils.listeners.TestListener"/>
         <listener class-name="utils.listeners.AnnotationTransformer"/>
     </listeners>
 
-    <test name="LoginTest">
+    <test name="HomeTest">
         <classes>
             <class name="tests.HomeTest"/>
         </classes>
