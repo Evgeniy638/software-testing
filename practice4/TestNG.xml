@@ -9,6 +9,7 @@
     <test name="HomeTest">
         <classes>
             <class name="tests.HomeTest"/>
+            <class name="tests.SupportTest"/>
         </classes>
     </test>
 </suite>
