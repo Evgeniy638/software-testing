@@ -1,6 +1,5 @@
 package pages.home;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import utils.logs.Log;
@@ -37,5 +36,17 @@ public class HomePage extends BasePage {
 
     public CatalogInHomePage goToCatalog() {
         return new CatalogInHomePage(driver);
+    }
+
+    public PreordersListInHomePage goToPreordersList() {
+        return new PreordersListInHomePage(driver);
+    }
+
+    public CategoriesHomePage goToCategories() {
+        return new CategoriesHomePage(driver);
+    }
+
+    public NavigationHomePage goToNavigation() {
+        return new NavigationHomePage(driver);
     }
 }
