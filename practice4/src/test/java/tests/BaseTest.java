@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import pages.RPGPage;
 import pages.SupportPage;
 import pages.home.HomePage;
 import utils.logs.Log;
@@ -13,7 +14,7 @@ public class BaseTest {
     public WebDriver driver;
     public HomePage  homePage;
     public SupportPage supportPage;
-
+    public RPGPage rpgPage;
     public WebDriver getDriver() {
         return driver;
     }
@@ -30,6 +31,7 @@ public class BaseTest {
     public void methodLevelSetup() {
         homePage = new HomePage(driver);
         supportPage = new SupportPage(driver);
+        rpgPage = new RPGPage(driver);
     }
 
     @AfterClass

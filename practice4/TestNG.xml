@@ -10,6 +10,7 @@
         <classes>
             <class name="tests.HomeTest"/>
             <class name="tests.SupportTest"/>
+            <class name="tests.RPGTest"/>
         </classes>
     </test>
 </suite>
