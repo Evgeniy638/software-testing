@@ -1,0 +1,20 @@
+
+#ifndef _C6_pr259_
+#define _C6_pr259_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F901_6639(EIF_REFERENCE);
+extern void F901_6640(EIF_REFERENCE, EIF_REFERENCE);
+extern void F901_6641(EIF_REFERENCE, EIF_POINTER, EIF_POINTER, EIF_POINTER, EIF_POINTER, EIF_INTEGER_32, EIF_BOOLEAN, EIF_INTEGER_32, EIF_INTEGER_32, EIF_INTEGER_32, EIF_POINTER);
+extern void EIF_Minit259(void);
+extern EIF_INTEGER_32 F900_6621(EIF_REFERENCE);
+extern EIF_BOOLEAN F900_6609(EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
