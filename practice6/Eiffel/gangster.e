@@ -22,17 +22,25 @@ feature
 feature
 
 	start_conversation (request:INTEGER)
+		require
+			contr_start_conv: request <= {APPLICATION}.Quantity_phones and busy = false
 		do
 			print("started talk with ")
 			print(request)
 			print("%N")
 			busy:= true
+		ensure
+			busy = true
 		end
 
 	stop_conversation ()
+		require
+			busy = true
 		do
 			print("stoped %N")
 			busy:= false
+		ensure
+			busy = false
 		end
 
 end

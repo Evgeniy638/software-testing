@@ -45,21 +45,25 @@ create
 
 	feature
 		run
+			require
+				message /= -1
 			do
 				wait (sleep_time)
 				make_talk (gangster, message)
 				wait (sleep_time * 10)
+			ensure
+				message /= -1
 			end
 
 		make_talk (gang: separate GANGSTER; mes: INTEGER)
-		require
-			not gang.busy
-		do
-			gang.start_conversation (mes)
-			wait (sleep_time * 100)
-			gang.stop_conversation
-		ensure
-			not gang.busy
-		end
+			require
+				not gang.busy and mes /= -1
+			do
+				gang.start_conversation (mes)
+				wait (sleep_time * 100)
+				gang.stop_conversation
+			ensure
+				not gang.busy and mes /= -1
+			end
 
 end

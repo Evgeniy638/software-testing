@@ -38,7 +38,7 @@ create
 				create phones.make
 				set_random
 				from
-					i := 1
+					i := 0
 				until
 					Quantity_phones < i
 				loop
