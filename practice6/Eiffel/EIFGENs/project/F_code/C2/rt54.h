@@ -1,0 +1,24 @@
+
+#ifndef _C2_rt54_
+#define _C2_rt54_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F58_1266(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit54(void);
+extern void F632_4210(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F632_4185(EIF_REFERENCE);
+extern void F632_4207(EIF_REFERENCE);
+extern void F632_4174(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F632_4205(EIF_REFERENCE);
+extern EIF_REFERENCE F395_2708(EIF_REFERENCE);
+extern EIF_BOOLEAN F517_3434(EIF_REFERENCE);
+extern void F632_4221(EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
